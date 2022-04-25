@@ -13,12 +13,7 @@ export const binarySearch = (list, item) => {
             console.log(`Binary search took ${t1 - t0} milliseconds.`);
             return item;
         }
-        else if(list[mid] < item){
-            left = mid + 1;
-            
-        }else{
-            right = mid - 1;
-        }
+        list[mid] < item ? (left = mid + 1) : (right = mid - 1);
     }
     if(left = item){
         return left
